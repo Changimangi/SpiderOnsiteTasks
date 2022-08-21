@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="otpverification.css">
+    <title>OTP verification for registration</title>
+</head>
+<body>
+    <div id="enclosure">
+    <form action="/otpforgotpwd" method="POST">
+        <input type="password" name="otpforregistration" id="otpforregistration" placeholder="Enter OTP"><br>
+        <input type="submit" id="submitbutton">
+    </form>
+    <p></p>
+</div>
+
+    <script>
+        var t = 120;
+        var timer = document.getElementsByTagName("p")[0];
+        var stopppingtimer = "no";
+        timingfunc();
+        function timingfunc(){
+            setInterval(timing,1000);
+            function timing(){
+                if(t==0 && stopppingtimer == "no"){
+                    stopppingtimer = "yes";
+                    clearInterval(timing);
+                    timer.innerHTML = " ";
+                    var newlink = document.createElement("a");
+                    var overall = document.getElementById("enclosure");
+                    var text = document.createTextNode("Resend OTP");
+                    newlink.appendChild(text);
+                    newlink.setAttribute("href","http://localhost:1270/otpforgotpwd")
+                    overall.appendChild(newlink);
+                }
+                else if(stopppingtimer == "no"){
+                    timer.innerHTML = t;
+                    t--;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

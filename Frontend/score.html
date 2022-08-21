@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="score.css">
+</head>
+<body>
+    <p></p>
+    <script>
+        var loc = location.href;
+        var score = gettingscore(loc);
+        document.getElementsByTagName("p")[0].innerHTML = "Your score: "+score;
+
+
+        function gettingscore(s){
+            let index;
+            let i;
+            for(i = s.length; i>=0; i--){
+                if(s.charAt(i)=="="){
+                    index = i+1;
+                }
+            }
+            let actual = s.slice(index,s.length);
+            return actual;
+        }
+    </script>
+</body>
+</html>

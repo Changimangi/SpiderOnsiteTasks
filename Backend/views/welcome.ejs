@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+    <div id="overall">
+    <p>Welcome <%=name%></p>
+    <button id="createtable">Create tables</button>
+    <button id="insert">Insert data</button>
+    <button id="update">Update data</button>
+    <button id="delete">Delete data</button>
+    <form action="/welcome" id="logout" method="POST">
+        <button id="click">Logout</button>
+    </form>
+</div>
+
+    <script>
+        document.getElementById("createtable").addEventListener("click",function(e){
+            e.preventDefault();
+            location.href = "http://localhost:1270/create"
+        })
+        document.getElementById("insert").addEventListener("click",function(e){
+            e.preventDefault();
+            location.href = "http://localhost:1270/insert"
+        })
+        document.getElementById("update").addEventListener("click",function(e){
+            e.preventDefault();
+            location.href = "http://localhost:1270/update"
+        })
+        document.getElementById("delete").addEventListener("click",function(e){
+            e.preventDefault();
+            location.href = "http://localhost:1270/delete"
+        })
+    </script>
+
+</body>
+</html>

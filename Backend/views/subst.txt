@@ -1,0 +1,3 @@
+<input type="text" name="tablename" placeholder="Enter table name"><br>
+        <input type="text" name="fieldlist" placeholder="Enter comma separated list of field names">
+        <input type="text" name="">

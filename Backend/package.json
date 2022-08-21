@@ -1,0 +1,31 @@
+{
+  "name": "onsitetask3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.1.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cryptr": "^6.0.3",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "groupdocs-conversion-cloud": "^22.3.0",
+    "http-errors": "^2.0.0",
+    "jade": "^1.11.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.7.8",
+    "nodemon": "^2.0.19",
+    "path": "^0.12.7"
+  }
+}

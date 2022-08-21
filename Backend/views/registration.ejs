@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div id="enclosure">
+    <div id="mailflex">
+    <p>Enter the details..</p>
+    <form action="/registration" method="POST">
+        <input type="text" name="name" class="inputfield" placeholder="User name"><br>
+        <input type="number" name="phoneno" class="inputfield" placeholder="Phone number"><br>
+        <input type="email" name="emailid" class="inputfield" placeholder="Email id"><br>
+        <input type="password" name="password" class="inputfield" placeholder="Password"><br>
+        <button type="submit" id="submitbutton">Submit</button>
+    </form>
+</div>
+</div>
+
+    <script>
+        $.ajax({
+            url: "/registration",
+            method: "POST",
+            data: {
+                data: "what you want to send",
+                put: "put them here"
+            },
+            cache: false,
+            success: function(data){
+                if(data["success"]){
+                    alert("user already exists");
+                }
+            },
+            error: function(){
+                alert("something went wrong");
+            }
+        })
+    </script>
+</body>
+</html>

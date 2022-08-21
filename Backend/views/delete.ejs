@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="delete.css">
+</head>
+<body>
+    <div id="overall">
+    <form action="/delete" method="POST" id="deletion">
+        <button id="submitting" type="submit">Submit</button><br>
+        <input type="text" name="tablename" placeholder="Enter table name"><br>
+        <p>Constraints: </p>
+        <input type="text" name="constraint" placeholder="field">
+        <input type="text" name="cval" placeholder="value"><br>
+       
+        <link rel="stylesheet" href="delete.ejs">
+    </form>
+    <button id="addfield">+</button>
+</div>
+
+    <script>
+        document.getElementById("addfield").addEventListener("click",function(){
+            let inp1 = document.createElement("input");
+            inp1.setAttribute("type","text");
+            inp1.setAttribute("name","constraint");
+            inp1.setAttribute("placeholder","Field");
+            let inp2 = document.createElement("input");
+            inp2.setAttribute("type","text");
+            inp2.setAttribute("name","cval");
+            inp2.setAttribute("placeholder","value");
+            let doc = document.getElementById("deletion");
+            doc.appendChild(inp1);
+            doc.appendChild(inp2);
+            doc.appendChild(document.createElement("br"))
+        })
+    </script>
+</body>
+</html>

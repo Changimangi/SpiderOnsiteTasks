@@ -1,0 +1,32 @@
+html{
+    background-image: url("background2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p{
+    font-size: 7vmin;
+}
+#overall{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    width:70%;
+    height: 6vh;
+    margin: 5px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 3vmin;
+    border: 1px solid blueviolet;
+    box-shadow: 0 0 5px blueviolet;
+}
+#click{
+    width: fit-content;
+    padding: 10px;
+}
